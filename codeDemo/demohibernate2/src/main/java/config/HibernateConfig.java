@@ -1,4 +1,4 @@
-package com.t3h.hibernate.config;
+package config;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;

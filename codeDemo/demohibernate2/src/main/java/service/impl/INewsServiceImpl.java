@@ -1,4 +1,4 @@
-package com.t3h.news.service.impl;
+package service.impl;
 
 import com.t3h.news.dao.INewsDao;
 import com.t3h.news.model.NewsModel;

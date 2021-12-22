@@ -1,4 +1,4 @@
-package com.t3h.news.service;
+package service;
 
 import com.t3h.news.model.CategoryModel;
 

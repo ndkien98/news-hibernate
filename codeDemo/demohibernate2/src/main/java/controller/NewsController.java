@@ -1,4 +1,4 @@
-package com.t3h.news.controller;
+package controller;
 
 import com.t3h.news.model.NewsModel;
 import com.t3h.news.model.request.NewsRequest;
