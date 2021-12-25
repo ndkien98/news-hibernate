@@ -1,19 +1,24 @@
-package model.entity;
+package model.response;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import java.sql.Timestamp;
 
 @Data
-@Table(name = "NEWS")
-@Entity
-public class NewsEntity extends BaseEntity{
+public class NewResponse {
+
+    private Integer id;
+
+    private Timestamp createDate;
+
+    private Timestamp updateDate;
+
+    private int creatorId;
+
+    private int editorId;
 
     private String title;
 
-    @Column(columnDefinition = "text")
     private String content;
 
     private String avatar;

@@ -2,10 +2,7 @@ package model.entity;
 
 import lombok.Data;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Data
@@ -20,7 +17,9 @@ public abstract class BaseEntity {
 
     private Timestamp updateDate;
 
+    @Column(nullable = true)
     private int creatorId;
 
+    @Column(nullable = true)
     private int editorId;
 }
