@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Data
-@Table(name = "NEW")
+@Table(name = "NEWS")
 @Entity
 /**
  * ORM non relationship

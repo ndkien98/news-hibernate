@@ -5,6 +5,7 @@ import com.t3h.newspringboot.model.request.NewsRequest;
 import com.t3h.newspringboot.model.response.NewResponse;
 import com.t3h.newspringboot.repository.NewsRepository;
 import com.t3h.newspringboot.service.INewService;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -71,22 +72,12 @@ public class INewServiceImpl implements INewService {
     }
 
     private NewsEntity convertRequestToEntity(NewsRequest request){
-        NewsEntity newsEntity = new NewsEntity();
-        newsEntity.setAuthor(request.getAuthor());
-        newsEntity.setContent(request.getContent());
-        newsEntity.setAvatar(request.getAvatar());
-        newsEntity.setCategoryId(request.getCategoryId());
-        newsEntity.setCensor(request.getCensor());
-        newsEntity.setNumberAccess(request.getNumberAccess());
-        return newsEntity;
+        ModelMapper modelMapper = new ModelMapper();
+        return modelMapper.map(request,NewsEntity.class);
     }
 
     private NewResponse convertEntityToResponse(NewsEntity entity){
-        NewResponse newResponse =new NewResponse();
-        newResponse.setAuthor(entity.getAuthor());
-        newResponse.setAvatar(entity.getAvatar());
-        newResponse.setContent(entity.getContent());
-        newResponse.setId(entity.getId());
-        return newResponse;
+        ModelMapper modelMapper = new ModelMapper();
+        return modelMapper.map(entity,NewResponse.class);
     }
 }
