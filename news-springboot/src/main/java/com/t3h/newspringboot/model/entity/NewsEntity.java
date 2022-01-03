@@ -9,6 +9,9 @@ import javax.persistence.Table;
 @Data
 @Table(name = "NEW")
 @Entity
+/**
+ * ORM non relationship
+ */
 public class NewsEntity extends BaseEntity{
 
     private String title;
